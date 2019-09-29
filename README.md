@@ -1,6 +1,6 @@
 # Miniretos Javascript
 
-Serie de miniretos de javascript.
+Serie de 10 miniretos de javascript con el objetivo de reforzar nuestros conocimientos en Javascript.
 
 ## Reto Nº 1:
 
@@ -15,9 +15,10 @@ repeat('cat', 1); // returns 'cat'
 <!-- # Solución
 
 ## Sol Nº 1:
-**[@yerson](https://github.com/yersoncp)** -->
+**[@yerson](https://github.com/yersoncp)**
+**[@kenyojoel903](https://github.com/kenyojoel903)** -->
 
 ## Código fuente
 * (I) [Stackblitz @yersoncp](https://stackblitz.com/edit/js-fronteros-miniretos-t1)
-* (II) Stackblitz @
+* (II) Stackblitz @kenyojoel903
 * (III) Stackblitz @
