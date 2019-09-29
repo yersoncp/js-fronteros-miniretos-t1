@@ -1,5 +1,7 @@
 # Miniretos Javascript
 
+Serie de miniretos de javascript.
+
 ## Reto Nº 1:
 
 Cree una función que repita una cadena n-veces. 'n' es un entero positivo. El primer parámetro es la cadena que se repetirá, y el segundo es la cantidad de veces que se repetirá.
