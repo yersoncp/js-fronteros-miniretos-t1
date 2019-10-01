@@ -60,9 +60,3 @@ function repeat(str, times) {
 **[@kikesan](https://github.com/kikesan)**
 ```javascript
 ``` -->
-
-
-<!-- ## Código fuente
-* (I) [Stackblitz @yersoncp](https://stackblitz.com/edit/js-fronteros-miniretos-t1-source)
-* (II) [Stackblitz @kenyojoel903](https://stackblitz.com/edit/js-fronteros-miniretos-t1-akawhl)
-* (III) [Stackblitz @kikesan](https://stackblitz.com/edit/js-fronteros-miniretos-t1-zmayxj) -->
