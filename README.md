@@ -28,6 +28,19 @@ largest([-100, Infinity, 5, 2, 7218902]); // returns Infinity
 largest([0]); // returns 0
 ```
 
+## Reto Nº 3
+
+Cree una función que enmascara una cadena de números, por ejemplo el número de tarjeta de crédito. Todos los números, excepto los últimos 4, deben reemplazarse con el carácter #.
+
+``` javascript
+mask('123456789'); // returns '#####6789'
+mask('12345'); // returns '#2345'
+mask('1234'); // returns '1234'
+mask(''); // returns ''
+```
+
+---
+
 # Solución
 
 ## Nº 1:
@@ -47,6 +60,23 @@ function repeat(str, times) {
   let cadena = ''
   for (let i = 0; i < times; i++) cadena += str
   return cadena
+}
+```
+
+## Nº 2:
+```javascript
+function largest(arr) {
+  return arr.sort((a, b) => b - a)[0];
+}
+```
+```javascript
+function largest(_array) {
+  return Math.max.apply(Math, _array);
+}
+```
+```javascript
+function largest(matriz){
+  return Math.max(...matriz)
 }
 ```
 
