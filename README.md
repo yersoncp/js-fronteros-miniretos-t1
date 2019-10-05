@@ -39,6 +39,16 @@ mask('1234'); // returns '1234'
 mask(''); // returns ''
 ```
 
+## Reto Nº 4
+El número de serie de diversos tickets consta de letras seguidos de nùmeros. Cree una función que permita añadir +1 a la parte numérica final del ticket.
+
+```javascript
+incrementTicket('AF4575');  // returns 'AF4576'
+incrementTicket('TP0005');  // returns 'TP0006'
+incrementTicket('HEP00049');  // returns 'HEP00050'
+incrementTicket('RB0000');  // returns 'RB0001'
+```
+
 ---
 
 # Solución
@@ -77,6 +87,16 @@ function largest(_array) {
 ```javascript
 function largest(matriz){
   return Math.max(...matriz)
+}
+```
+
+## Nº 3:
+```javascript
+function mask(str) {
+  return str.replace(/\d(?=\d{4})/g, '#');
+}
+function mask(str) {
+  return str.replace(/.(?=.{4})/g, '#')
 }
 ```
 
