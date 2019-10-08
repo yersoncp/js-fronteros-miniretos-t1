@@ -49,6 +49,17 @@ incrementTicket('HEP00049');  // returns 'HEP00050'
 incrementTicket('RB0000');  // returns 'RB0001'
 ```
 
+## Reto Nº 5
+Los alfabetos disfrutan hacer olas en el futbol. Ayúdalo creando una función que convierta una cadena a una matriz donde una letra mayúscula significa que está de pie.
+1. La cadena de entrada siempre estará en minúscula
+2. Si el carácter de la cadena es un espacio en blanco, páselo como si fuera un asiento vacío.
+
+```javascript
+wave("hola") // return ["Hola", "hOla", "hoLa", "holA"]
+wave("gol peru") // return ["Gol peru", "gOl peru", "goL peru", "gol Peru", "gol pEru", "gol peRu", "gol perU"]
+wave("") // return [];
+```
+
 ---
 
 # Solución
@@ -95,8 +106,36 @@ function largest(matriz){
 function mask(str) {
   return str.replace(/\d(?=\d{4})/g, '#');
 }
+
 function mask(str) {
   return str.replace(/.(?=.{4})/g, '#')
+}
+
+function mask(cadena){
+  return cadena.replace(/.(?=.{4})/g, '#')
+}
+```
+
+## Nº 4:
+```javascript
+function incrementTicket(str) {
+  let arr = str.match(/[a-zA-Z]+|0+|\d+$/g).reverse();
+  arr[0] = +arr[0] ? +arr[0] + 1 : arr[0].replace(/\d{1}$/g, 1);
+  return arr.reverse().join('');
+}
+
+function incrementTicket(ticket) {
+  var str_num = ticket.replace(new RegExp('\[A-Z]', 'g'), '0');
+  var str_text = ticket.replace(new RegExp('\[0-9]', 'g'), '');
+  var num = Number(str_num) + 1;
+  return str_text + str_num;
+}
+
+function incrementTicket(ticket) {
+  return ticket.replace(/\d+$/, num => {
+    let out = `${+num + 1}`
+    return num.slice(0, -out.length) + out
+  })
 }
 ```
 
