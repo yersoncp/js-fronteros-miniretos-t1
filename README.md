@@ -60,6 +60,34 @@ wave("gol peru") // return ["Gol peru", "gOl peru", "goL peru", "gol Peru", "gol
 wave("") // return [];
 ```
 
+## Reto Nº 6
+
+**Érase una vez, en un camino a través del viejo oeste salvaje...**
+
+Un hombre recibió instrucciones para ir de un punto a otro. Las instrucciones eran "NORTE", "SUR", "OESTE", "ESTE". Claramente, "NORTE" y "SUR" son opuestos, "OESTE" y "ESTE" también. Ir en una dirección y regresar en la dirección opuesta es un esfuerzo innecesario. Dado que este es el salvaje oeste, con un clima terrible y poca agua, es importante ahorrar energía, de lo contrario, ¡podría morir!
+
+
+Las instrucciones dadas al hombre son, por ejemplo:
+```
+["NORTE", "SUR", "SUR", "ESTE", "OESTE", "NORTE"]
+```
+Inmediatamente puede ver que ir "NORTE" y luego "SUR" no es razonable, ¡mejor quédese en el mismo lugar! El camino se convierte en ["SUR", "ESTE", "OESTE", "NORTE"]. Ahora, "ESTE" y "OESTE" se anula entre sí. Luego "SUR" y "NORTE" no son directamente opuestos pero se vuelven directamente opuestos después de la reducción de "ESTE" y "OESTE".
+
+La tarea es darle al hombre una versión simplificada del plan.
+
+
+``` javascript
+reducePlan(["SUR", "NORTE", "ESTE", "OESTE", "ESTE"]);
+// return ["ESTE"]
+
+reducePlan(["NORTE", "SUR", "SUR", "ESTE", "OESTE", "NORTE"]);
+// return []
+
+reducePlan(["ESTE", "SUR", "SUR", "NORTE", "NORTE", "OESTE"]);
+// return []
+```
+
+
 ---
 
 # Solución
@@ -137,6 +165,33 @@ function incrementTicket(ticket) {
     return num.slice(0, -out.length) + out
   })
 }
+```
+
+## Nº 5
+
+```javascript
+function wave(str) {
+  let ola = []
+  if (str) {
+    str.split('').map((letra, index) => {
+      if (letra !== ' ') {
+        ola.push(str.replace(str[index], letra.toUpperCase()))
+      }
+    })
+  }
+  return ola
+}
+```
+
+```javascript
+function wave(str) {
+  return str.split('')
+    .map((e, index) => {
+      return e !== ' ' ? str.replace(/./g, (c, i) => i === index ? c.toUpperCase() : c) : null
+    })
+    .filter(e => e)
+}
+
 ```
 
 <!-- ## Nº 2:
