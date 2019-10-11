@@ -191,7 +191,17 @@ function wave(str) {
     })
     .filter(e => e)
 }
+```
 
+```javascript
+function wave(cadena) {
+  let _olas = [];
+  cadena.split("").map(function (c, i) {
+    if (c !== '')
+      _olas.push(cadena.replace(cadena[i], c.toUpperCase()));
+  });
+  return _olas;
+}
 ```
 
 <!-- ## Nº 2:
