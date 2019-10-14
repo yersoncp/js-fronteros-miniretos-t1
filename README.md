@@ -87,6 +87,31 @@ reducePlan(["ESTE", "SUR", "SUR", "NORTE", "NORTE", "OESTE"]);
 // return []
 ```
 
+## Reto Nº 7
+
+En un momento crucial, una cantidad **'n'** de personas forman un círculo para finalmente queda sólo un sobreviviente, lamentablemente el resto será ejecutado por la justicia que a elegido la [Permutación de Josefo](https://en.wikipedia.org/wiki/Josephus_problem) para hallar al único sobreviviente.
+
+El conteo comienza alrededor del círculo en una dirección. Cada persona en la posición **'k'** es ejecutada. El procedimiento se repite con las personas restantes hasta que sólo quede una persona y se libere.
+
+**Ejemplo:**
+```javascript
+josephusSurvivor(7, 3)
+//Si n=7 personas en un círculo y cada k=3 son ejecutadas
+
+1,2,3,4,5,6,7 => Secuencia inicial
+1,2,4,5,7 => 3 y 6 ejecutados
+1,4,5 => 2 y 7 ejecutados
+1,4 => 5 ejecutado
+4 => 1 ejecutado, el sobreviviente es 4
+```
+
+Ya sabes que hacer, encuentra al sobreviviente. Si hay solo una persona tomar como sobreviviente único.
+
+```javascript
+josephusSurvivor(7, 3) // return 4
+josephusSurvivor(41, 3) // return 31
+josephusSurvivor(1, 2) // return 1
+```
 
 ---
 
@@ -204,13 +229,66 @@ function wave(cadena) {
 }
 ```
 
-<!-- ## Nº 2:
-**[@yersoncp](https://github.com/yersoncp)**
+## Nº 6
+
 ```javascript
+function reducePlan(arr) {
+  let getInverse = function(e) {
+    switch (e) {
+      case 'SUR': return 'NORTE'; break;
+      case 'NORTE': return 'SUR'; break;
+      case 'ESTE': return 'OESTE'; break;
+      case 'OESTE': return 'ESTE'; break;
+      default: return ''; break;
+    }
+  }
+  let index = 0;
+  while (arr[index + 1]) {
+    if (arr[index] === getInverse(arr[index + 1])) {
+      arr.splice(index, 2);
+      index = 0;
+    } else {
+      index++;
+    }
+  }
+  return arr;
+}
 ```
-**[@kenyojoel903](https://github.com/kenyojoel903)**
+
 ```javascript
+function reducePlan(_plan) {
+  var _string = "";
+  _plan.forEach(e => {
+    if (e === "NORTE") {
+      _string += "N";
+    } else if (e === "SUR") {
+      _string += "S";
+    } else if (e === "ESTE") {
+      _string += "E";
+    } else if (e === "OESTE") {
+      _string += "O";
+    }
+  });
+  var _matches = /NS|SN|EO|OE/;
+  while (_matches.test(_string)) {
+    _string = _string.replace(_matches, "");
+  }
+  var res = _string.match(/N|S|E|O/);
+  if (!res)
+    return [];
+  var _p = res.input.trim().split("");
+  var newPlan = [];
+  _p.forEach(e => {
+    if (e === "N") {
+      newPlan.push("NORTE");
+    } else if (e === "S") {
+      newPlan.push("SUR");
+    } else if (e === "E") {
+      newPlan.push("ESTE");
+    } else if (e === "O") {
+      newPlan.push("OESTE");
+    }
+  })
+  return newPlan;
+}
 ```
-**[@kikesan](https://github.com/kikesan)**
-```javascript
-``` -->
