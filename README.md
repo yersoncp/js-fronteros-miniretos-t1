@@ -89,7 +89,7 @@ reducePlan(["ESTE", "SUR", "SUR", "NORTE", "NORTE", "OESTE"]);
 
 ## Reto Nº 7
 
-En un momento crucial, una cantidad **'n'** de personas forman un círculo para finalmente queda sólo un sobreviviente, lamentablemente el resto será ejecutado por la justicia que a elegido la [Permutación de Josefo](https://en.wikipedia.org/wiki/Josephus_problem) para hallar al único sobreviviente.
+En un momento crucial, una cantidad **'n'** de personas forman un círculo para finalmente quedar sólo un sobreviviente, lamentablemente el resto será ejecutado por la justicia que a elegido la [Permutación de Josefo](https://en.wikipedia.org/wiki/Josephus_problem) para hallar al único sobreviviente.
 
 El conteo comienza alrededor del círculo en una dirección. Cada persona en la posición **'k'** es ejecutada. El procedimiento se repite con las personas restantes hasta que sólo quede una persona y se libere.
 
