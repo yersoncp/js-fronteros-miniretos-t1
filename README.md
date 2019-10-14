@@ -98,11 +98,11 @@ El conteo comienza alrededor del círculo en una dirección. Cada persona en la 
 josephusSurvivor(7, 3)
 //Si n=7 personas en un círculo y cada k=3 son ejecutadas
 
-1,2,3,4,5,6,7 => Secuencia inicial
-1,2,4,5,7 => 3 y 6 ejecutados
-1,4,5 => 2 y 7 ejecutados
-1,4 => 5 ejecutado
-4 => 1 ejecutado, el sobreviviente es 4
+1,2,3,4,5,6,7 // Secuencia inicial
+1,2,4,5,7 // 3 y 6 ejecutados
+1,4,5 // 2 y 7 ejecutados
+1,4 // 5 ejecutado
+4 // 1 ejecutado, el sobreviviente es 4
 ```
 
 Ya sabes que hacer, encuentra al sobreviviente. Si hay solo una persona tomar como sobreviviente único.
