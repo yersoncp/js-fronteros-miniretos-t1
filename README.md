@@ -113,6 +113,17 @@ josephusSurvivor(41, 3) // return 31
 josephusSurvivor(1, 2) // return 1
 ```
 
+## Reto Nº 8
+Suma números, no hay nada mas que decir.
+* Las entradas siempre serán numeros
+
+```javascript
+sum(2) // return 2
+sum(1)(3) // return 4
+sum(2)(5)(3) // return 10
+sum(1)(0)(3)(2) // return 6
+```
+
 ---
 
 # Solución
@@ -290,5 +301,23 @@ function reducePlan(_plan) {
     }
   })
   return newPlan;
+}
+```
+
+## Nº 7
+
+```javascript
+function josephusSurvivor(n, k) {
+  return n === 1 ? 1 : ((josephusSurvivor(n - 1, k) + k - 1) % n) + 1;
+}
+```
+
+```javascript
+function josephusSurvivor(n, interval) {
+  return (
+    n > 1
+      ? (josephusSurvivor(n - 1, interval) + interval - 1) % n + 1
+      : 1
+  )
 }
 ```
