@@ -124,6 +124,24 @@ sum(2)(5)(3) // return 10
 sum(1)(0)(3)(2) // return 6
 ```
 
+## Reto Nº 9
+John ha invitado a algunos amigos a una fiesta. Su lista es, según nombres y apellidos:
+
+```
+['Fredy Corwill', 'Wilfredo Corwill', 'Barney Tornbull', 'Betty Tornbull', 'Ben Tornbull', 'Raphael Corwill', 'Alfredo Corwill'];
+```
+
+* Ordenar de forma alfabética por apellido.
+* Si los apellidos son iguales, ordenar por nombre.
+* El resultado es una lista ordenada de 'apellidos y nombres'.
+
+```javascript
+partyList(arr)
+// return:
+// ['Corwill Alfredo', 'Corwill Fredy', 'Corwill Raphael', 'Corwill Wilfredo', 'Tornbull Barney', 'Tornbull Ben', 'Tornbull Betty']
+````
+
+
 ---
 
 # Solución
@@ -320,4 +338,16 @@ function josephusSurvivor(n, interval) {
       : 1
   )
 }
+```
+
+## Nº 8
+```javascript
+function sum(n) {
+  function f(x) {
+    return sum(n + x);
+  }
+  f.valueOf = () => n;
+  return f;
+}
+// Use +sum(2)(5)(3);
 ```
