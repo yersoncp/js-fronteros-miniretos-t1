@@ -128,7 +128,9 @@ sum(1)(0)(3)(2) // return 6
 John ha invitado a algunos amigos a una fiesta. Su lista es, según nombres y apellidos:
 
 ```
-['Fredy Corwill', 'Wilfredo Corwill', 'Barney Tornbull', 'Betty Tornbull', 'Ben Tornbull', 'Raphael Corwill', 'Alfredo Corwill'];
+['Fredy Corwill', 'Wilfredo Corwill', 'Barney Tornbull',
+'Betty Tornbull', 'Ben Tornbull', 'Raphael Corwill',
+'Alfredo Corwill'];
 ```
 
 * Ordenar de forma alfabética por apellido.
@@ -137,8 +139,11 @@ John ha invitado a algunos amigos a una fiesta. Su lista es, según nombres y ap
 
 ```javascript
 partyList(arr)
-// return:
-// ['Corwill Alfredo', 'Corwill Fredy', 'Corwill Raphael', 'Corwill Wilfredo', 'Tornbull Barney', 'Tornbull Ben', 'Tornbull Betty']
+/* return:
+['Corwill Alfredo', 'Corwill Fredy', 'Corwill Raphael',
+'Corwill Wilfredo', 'Tornbull Barney', 'Tornbull Ben',
+'Tornbull Betty']
+*/
 ````
 
 
