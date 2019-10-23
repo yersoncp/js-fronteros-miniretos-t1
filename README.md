@@ -138,12 +138,41 @@ John ha invitado a algunos amigos a una fiesta. Su lista es, según nombres y ap
 * El resultado es una lista ordenada de 'apellidos y nombres'.
 
 ```javascript
-partyList(arr)
+partyList(['Fredy Corwill', 'Wilfredo Corwill', 'Barney Tornbull',
+'Betty Tornbull', 'Ben Tornbull', 'Raphael Corwill',
+'Alfredo Corwill'])
 /* return:
-['Corwill Alfredo', 'Corwill Fredy', 'Corwill Raphael',
-'Corwill Wilfredo', 'Tornbull Barney', 'Tornbull Ben',
-'Tornbull Betty']
+[
+  'Corwill Alfredo',
+  'Corwill Fredy',
+  'Corwill Raphael',
+  'Corwill Wilfredo',
+  'Tornbull Barney',
+  'Tornbull Ben',
+  'Tornbull Betty'
+]
 */
+
+partyList(['Alexis Wahl', 'John Bell', 'Victoria Schwarz',
+'Abba Dorny', 'Grace Meta', 'Ann Arno', 'Madison STAN',
+'Alex Cornwell', 'Lewis Kern', 'Megan Stan', 'Alex Korn'])
+/*
+Return:
+[
+  'Arno Ann',
+  'Bell John',
+  'Cornwell Alex',
+  'Dorny Abba',
+  'Kern Lewis',
+  'Korn Alex',
+  'Meta Grace',
+  'Schwarz Victoria',
+  'STAN Madison',
+  'Stan Megan',
+  'Wahl Alexis'
+]
+*/
+
 ````
 
 
