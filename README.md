@@ -173,8 +173,16 @@ Return:
 ]
 */
 
-````
+```
 
+## Reto Nº 10:
+
+Obtener el segundo número mas grande. Eso es todo.
+* La entrada siempre tendrá 2 o más números.
+``` javascript
+getSecondLargest([2, 4, 7]) // return 4
+getSecondLargest([3, 5, 6, 7, 7]) // return 6
+```
 
 ---
 
@@ -384,4 +392,22 @@ function sum(n) {
   return f;
 }
 // Use +sum(2)(5)(3);
+```
+
+## Nº 9
+
+```javascript
+function partyList(arr) {
+  return arr
+    .map(e => e
+      .split(' ')
+      .reverse()
+      .join(' ')
+    )
+    .sort((a, b) => {
+      let _a = a.toLowerCase();
+      let _b = b.toLowerCase();
+      return _a > _b ? 1 : (_a < _b ? -1 : 0);
+    })
+}
 ```
