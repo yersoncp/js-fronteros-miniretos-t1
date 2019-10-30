@@ -2,6 +2,13 @@
 
 Serie de 10 miniretos de javascript con el objetivo de reforzar los conocimientos en Javascript.
 
+* **Estado**: Finalizado
+
+Los retos fueron obtenidos y traducidos desde:
+* [https://the-javascript-exam.herokuapp.com/](https://the-javascript-exam.herokuapp.com/)
+* [https://www.hackerrank.com/](https://www.hackerrank.com/)
+* [https://www.codewars.com/](https://www.codewars.com/)
+
 ## Participantes
 
 * **[@yersoncp](https://github.com/yersoncp)**
@@ -409,5 +416,24 @@ function partyList(arr) {
       let _b = b.toLowerCase();
       return _a > _b ? 1 : (_a < _b ? -1 : 0);
     })
+}
+```
+
+## Nº 10
+
+```javascript
+function getSecondLargest(lista){
+  let unicos = lista.sort((a, b)=>{return a-b}).filter((valor, indice, self) => {
+    return self.indexOf(valor) === indice;
+  })
+  return unicos[unicos.length-2]
+}
+```
+
+```javascript
+function getSecondLargest(arr) {
+  return arr
+    .filter((e, i, a) => a.findIndex(v => v === e) === i)
+    .sort((a, b) => b - a)[1]
 }
 ```
