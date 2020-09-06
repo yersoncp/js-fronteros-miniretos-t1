@@ -196,6 +196,8 @@ getSecondLargest([3, 5, 6, 7, 7]) // return 6
 # Solución
 
 ## Nº 1:
+<details>
+<summary>Ver solución</summary>
 
 ```javascript
 function repeat(str, n) {
@@ -215,7 +217,12 @@ function repeat(str, times) {
 }
 ```
 
+</details>
+
 ## Nº 2:
+<details>
+<summary>Ver solución</summary>
+
 ```javascript
 function largest(arr) {
   return arr.sort((a, b) => b - a)[0];
@@ -232,7 +239,12 @@ function largest(matriz){
 }
 ```
 
+</details>
+
 ## Nº 3:
+<details>
+<summary>Ver solución</summary>
+
 ```javascript
 function mask(str) {
   return str.replace(/\d(?=\d{4})/g, '#');
@@ -247,7 +259,12 @@ function mask(cadena){
 }
 ```
 
+</details>
+
 ## Nº 4:
+<details>
+<summary>Ver solución</summary>
+
 ```javascript
 function incrementTicket(str) {
   let arr = str.match(/[a-zA-Z]+|0+|\d+$/g).reverse();
@@ -270,7 +287,12 @@ function incrementTicket(ticket) {
 }
 ```
 
+</details>
+
+
 ## Nº 5
+<details>
+<summary>Ver solución</summary>
 
 ```javascript
 function wave(str) {
@@ -307,7 +329,11 @@ function wave(cadena) {
 }
 ```
 
+</details>
+
 ## Nº 6
+<details>
+<summary>Ver solución</summary>
 
 ```javascript
 function reducePlan(arr) {
@@ -371,7 +397,11 @@ function reducePlan(_plan) {
 }
 ```
 
+</details>
+
 ## Nº 7
+<details>
+<summary>Ver solución</summary>
 
 ```javascript
 function josephusSurvivor(n, k) {
@@ -389,7 +419,13 @@ function josephusSurvivor(n, interval) {
 }
 ```
 
+</details>
+
+
 ## Nº 8
+<details>
+<summary>Ver solución</summary>
+
 ```javascript
 function sum(n) {
   function f(x) {
@@ -401,7 +437,13 @@ function sum(n) {
 // Use +sum(2)(5)(3);
 ```
 
+</details>
+
+
 ## Nº 9
+
+<details>
+<summary>Ver solución</summary>
 
 ```javascript
 function partyList(arr) {
@@ -419,7 +461,13 @@ function partyList(arr) {
 }
 ```
 
+</details>
+
+
 ## Nº 10
+
+<details>
+<summary>Ver solución</summary>
 
 ```javascript
 function getSecondLargest(lista){
@@ -437,3 +485,4 @@ function getSecondLargest(arr) {
     .sort((a, b) => b - a)[1]
 }
 ```
+</details>
